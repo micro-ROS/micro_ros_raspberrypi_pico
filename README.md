@@ -37,8 +37,14 @@ cp pico_micro_ros_example.uf2 /media/$USER/RPI-RP2
 ```
 
 ### 3. Start Micro-ROS Agent
-Micro-ROS follows the client-server architecture, so you need to start the Micro-ROS Agent:
+Micro-ROS follows the client-server architecture, so you need to start the Micro-ROS Agent.
+You can do so using the [micro-ros-agent Snap](https://snapcraft.io/micro-ros-agent) (follow the link for installation details):
 
+```bash
+micro-ros-agent serial --dev /dev/ttyACM0 -b 115200
+```
+
+or using the [micro-ros-agent Docker](https://hub.docker.com/r/microros/micro-ros-agent):
 ```bash
 docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:foxy serial --dev /dev/ttyACM0 -b 115200
 ```
