@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Manual trigger"
+  schedule:
+    - cron:  '0 4 * * *'
+  pull_request:
+    branches: 
+      - '**'
+
+jobs:
+
+  micro_ros_raspberrypi_pico_sdk:
+    runs-on: ubuntu-latest
+    container: ubuntu:20.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: micro_ros_raspberrypi_pico_sdk
+
+      - name: Dependencies
+        shell: bash
+        run: |
+          apt update
+          export DEBIAN_FRONTEND=noninteractive
+          apt install -y g++ gcc-arm-none-eabi doxygen libnewlib-arm-none-eabi git python3 cmake
+          git clone --recurse-submodules https://github.com/raspberrypi/pico-sdk.git $HOME/pico-sdk
+
+      - name: Build
+        shell: bash
+        run: |
+          export PICO_SDK_PATH=$HOME/pico-sdk
+          cd micro_ros_raspberrypi_pico_sdk
+          mkdir build 
+          cd build
+          cmake ..
+          make
+          (test -f pico_micro_ros_example.uf2) && true || false
+
+      
