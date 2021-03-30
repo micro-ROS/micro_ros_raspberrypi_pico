@@ -1,0 +1,82 @@
+#!/bin/bash
+
+PLATFORMS=()
+while getopts "p:" o; do 
+    case "$o" in
+        p)
+            PLATFORMS+=(${OPTARG})
+            ;;
+    esac
+done
+
+if [ $OPTIND -eq 1 ]; then 
+    PLATFORMS+=("opencr1")
+    PLATFORMS+=("teensy4")
+    PLATFORMS+=("teensy32")
+    PLATFORMS+=("teensy35")
+    PLATFORMS+=("cortex_m0")
+    PLATFORMS+=("cortex_m3")
+    # PLATFORMS+=("portenta-m4")
+    PLATFORMS+=("portenta-m7")
+fi
+
+shift $((OPTIND-1))
+
+######## Configure Raspberry Pi Pico SDK  ########
+
+apt update 
+
+apt install -y gcc-arm-none-eabi
+
+git clone https://github.com/raspberrypi/pico-sdk /pico-sdk
+
+######## Init ########
+
+cd /uros_ws
+
+source /opt/ros/$ROS_DISTRO/setup.bash
+source install/local_setup.bash
+
+ros2 run micro_ros_setup create_firmware_ws.sh generate_lib
+
+######## Adding extra packages ########
+pushd firmware/mcu_ws > /dev/null
+
+    # Workaround: Copy just tf2_msgs
+    git clone -b foxy https://github.com/ros2/geometry2
+    cp -R geometry2/tf2_msgs ros2/tf2_msgs
+    rm -rf geometry2
+
+    # Import user defined packages
+    mkdir extra_packages
+    pushd extra_packages > /dev/null
+        cp -R /arduino_project/extras/library_generation/extra_packages/* .
+        vcs import --input extra_packages.repos
+    popd > /dev/null
+
+popd > /dev/null
+
+######## Clean and source ########
+find /arduino_project/src/ ! -name micro_ros_arduino.h ! -name *.c ! -name *.cpp ! -name *.c.in -delete
+
+######## Build for Raspberry Pi Pico SDK  ########
+rm -rf firmware/build
+
+export PICO_SDK_PATH=/pico-sdk
+ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
+
+find firmware/build/include/ -name "*.c"  -delete
+cp -R firmware/build/include/* /arduino_project/libmicroros/include 
+
+cp -R firmware/build/libmicroros.a /arduino_project/libmicroros/libmicroros.a
+
+######## Generate extra files ########
+find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /arduino_project/available_ros2_types
+find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /arduino_project/available_ros2_types
+
+cd firmware
+echo "" > /arduino_project/built_packages
+for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git config --get remote.origin.url) $(git rev-parse HEAD) >> /arduino_project/built_packages; popd > /dev/null; done;
+
+######## Fix permissions ########
+sudo chmod -R 777 /arduino_project

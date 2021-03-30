@@ -5,8 +5,10 @@
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
 #include <std_msgs/msg/int32.h>
+#include <rmw_uros/options.h>
 
 #include "pico/stdlib.h"
+#include "pico_uart_transports.h"
 
 const uint LED_PIN = 25;
 
@@ -15,12 +17,21 @@ std_msgs__msg__Int32 msg;
 
 void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 {
-    rcl_publish(&publisher, &msg, NULL);
+    rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
     msg.data++;
 }
 
 int main()
 {
+    rmw_uros_set_custom_transport(
+		true,
+		NULL,
+		pico_serial_transport_open,
+		pico_serial_transport_close,
+		pico_serial_transport_write,
+		pico_serial_transport_read
+	);
+
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 

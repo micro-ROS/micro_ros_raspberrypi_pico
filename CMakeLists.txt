@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
-link_directories(uros_ws/firmware/build)
+link_directories(libmicroros)
 add_executable(pico_micro_ros_example
     pico_micro_ros_example.c
-    pico_ros.c
+    pico_uart_transport.c
 )
 target_link_libraries(pico_micro_ros_example
     pico_stdlib
@@ -19,8 +19,11 @@ target_link_libraries(pico_micro_ros_example
 )
 
 target_include_directories(pico_micro_ros_example PUBLIC
-    uros_ws/firmware/build/include
+    libmicroros/include
 )
+
+SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
+SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
 
 # Configure Pico
 pico_enable_stdio_usb(pico_micro_ros_example 1)

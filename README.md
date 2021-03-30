@@ -50,15 +50,27 @@ docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agen
 ```
 
 ## What files are relevant?
-- `pico_ros.c`: Contains the board specific implementation of the serial transport (no change needed).
+- `pico_uart_transport.c`: Contains the board specific implementation of the serial transport (no change needed).
 - `CMakeLists.txt`: CMake file.
 - `pico_micro_ros_example.c`: The actual ROS 2 publisher.
 
-## How Micro-ROS is compiled?
+## How to build the precompiled library
 
-Micro-ROS is precompiled for Raspberry Pi Pico in [`uros_ws/firmware/build`](uros_ws/firmware/build).
-If you want to compile it by yourself then check the [`uros_ws`](uros_ws) directory.
+Micro-ROS is precompiled for Raspberry Pi Pico in [`libmicroros`](libmicroros).
+If you want to compile it by yourself:
 
+<!-- 
+pushd extras/library_generation
+docker build . -t microros/micro_ros_arduino_builder:foxy
+popd
+ -->
+
+```bash
+docker pull microros/micro_ros_arduino_builder:foxy
+docker run -it --rm -v $(pwd):/arduino_project microros/micro_ros_arduino_builder:foxy
+```
+
+Note that folders added to `extras/library_generation/extra_packages` and entries added to `extras/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
 ## How to use Pico SDK?
 
 Here is a Raspberry Pi Pico C/C++ SDK documentation:  
