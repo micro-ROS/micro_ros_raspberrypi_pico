@@ -7,7 +7,6 @@
 Here is a quick way to compile the example given in this repository.
 
 ### 1. Install Pico SDK
-
 First, make sure the Pico SDK is properly installed and configured:
 
 ```bash

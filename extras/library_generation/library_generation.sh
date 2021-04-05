@@ -1,27 +1,5 @@
 #!/bin/bash
 
-PLATFORMS=()
-while getopts "p:" o; do 
-    case "$o" in
-        p)
-            PLATFORMS+=(${OPTARG})
-            ;;
-    esac
-done
-
-if [ $OPTIND -eq 1 ]; then 
-    PLATFORMS+=("opencr1")
-    PLATFORMS+=("teensy4")
-    PLATFORMS+=("teensy32")
-    PLATFORMS+=("teensy35")
-    PLATFORMS+=("cortex_m0")
-    PLATFORMS+=("cortex_m3")
-    # PLATFORMS+=("portenta-m4")
-    PLATFORMS+=("portenta-m7")
-fi
-
-shift $((OPTIND-1))
-
 ######## Configure Raspberry Pi Pico SDK  ########
 
 apt update 
@@ -66,6 +44,7 @@ export PICO_SDK_PATH=/pico-sdk
 ros2 run micro_ros_setup build_firmware.sh /arduino_project/extras/library_generation/toolchain.cmake /arduino_project/extras/library_generation/colcon.meta
 
 find firmware/build/include/ -name "*.c"  -delete
+mkdir -p /arduino_project/libmicroros/include 
 cp -R firmware/build/include/* /arduino_project/libmicroros/include 
 
 cp -R firmware/build/libmicroros.a /arduino_project/libmicroros/libmicroros.a
@@ -80,3 +59,4 @@ for f in $(find $(pwd) -name .git -type d); do pushd $f > /dev/null; echo $(git 
 
 ######## Fix permissions ########
 sudo chmod -R 777 /arduino_project
+sudo chmod -R -x+X /arduino_project
