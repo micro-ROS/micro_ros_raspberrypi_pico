@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/// @file
+
 #ifndef RCL__LOGGING_ROSOUT_H_
 #define RCL__LOGGING_ROSOUT_H_
 
@@ -25,6 +27,25 @@
 extern "C"
 {
 #endif
+
+/// The default qos profile setting for topic /rosout
+/**
+ * - depth = 1000
+ * - durability = RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL
+ * - lifespan = {10, 0}
+ */
+static const rmw_qos_profile_t rcl_qos_profile_rosout_default =
+{
+  RMW_QOS_POLICY_HISTORY_KEEP_LAST,
+  1000,
+  RMW_QOS_POLICY_RELIABILITY_RELIABLE,
+  RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL,
+  RMW_QOS_DEADLINE_DEFAULT,
+  {10, 0},
+  RMW_QOS_POLICY_LIVELINESS_SYSTEM_DEFAULT,
+  RMW_QOS_LIVELINESS_LEASE_DURATION_DEFAULT,
+  false
+};
 
 /// Initializes the rcl_logging_rosout features
 /**
@@ -40,10 +61,10 @@ extern "C"
  * Lock-Free          | Yes
  *
  * \param[in] allocator The allocator used for metadata related to the rcl_logging_rosout features
- * \return `RCL_RET_OK` if the rcl_logging_rosout features are successfully initialized, or
- * \return `RCL_RET_INVALID_ARGUMENT` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the rcl_logging_rosout features are successfully initialized, or
+ * \return #RCL_RET_INVALID_ARGUMENT if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -64,8 +85,8 @@ rcl_logging_rosout_init(
  * Uses Atomics       | No
  * Lock-Free          | Yes
  *
- * \return `RCL_RET_OK` if the rcl_logging_rosout feature was successfully unitialized, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the rcl_logging_rosout feature was successfully unitialized, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -93,10 +114,10 @@ rcl_logging_rosout_fini();
  * Lock-Free          | Yes
  *
  * \param[in] node a valid rcl_node_t that the publisher will be created on
- * \return `RCL_RET_OK` if the logging publisher was created successfully, or
- * \return `RCL_RET_NODE_INVALID` if the argument is invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the logging publisher was created successfully, or
+ * \return #RCL_RET_NODE_INVALID if the argument is invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
@@ -119,10 +140,10 @@ rcl_logging_rosout_init_publisher_for_node(
  * Lock-Free          | Yes
  *
  * \param[in] node a valid rcl_node_t that the publisher will be created on
- * \return `RCL_RET_OK` if the logging publisher was finalized successfully, or
- * \return `RCL_RET_NODE_INVALID` if any arguments are invalid, or
- * \return `RCL_RET_BAD_ALLOC` if allocating memory failed, or
- * \return `RCL_RET_ERROR` if an unspecified error occurs.
+ * \return #RCL_RET_OK if the logging publisher was finalized successfully, or
+ * \return #RCL_RET_NODE_INVALID if any arguments are invalid, or
+ * \return #RCL_RET_BAD_ALLOC if allocating memory failed, or
+ * \return #RCL_RET_ERROR if an unspecified error occurs.
  */
 RCL_PUBLIC
 RCL_WARN_UNUSED
