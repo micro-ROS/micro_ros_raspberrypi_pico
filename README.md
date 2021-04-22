@@ -11,7 +11,8 @@ First, make sure the Pico SDK is properly installed and configured:
 
 ```bash
 # Install dependencies
-sudo apt install g++ gcc-arm-none-eabi doxygen libnewlib-arm-none-eabi git python3
+sudo apt install cmake g++ gcc-arm-none-eabi doxygen libnewlib-arm-none-eabi git python3
+
 git clone --recurse-submodules https://github.com/raspberrypi/pico-sdk.git $HOME/pico-sdk
 
 # Configure environment
