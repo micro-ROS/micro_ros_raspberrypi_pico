@@ -8,7 +8,7 @@ Here is a quick way to compile the example given in this repository.
 
 ### Dependencies
 
-Micro-ROS precompiled library is compiled using arm-none-eabi-gcc 9.2.1, a compatible version is expected when building the micro-ROS project.
+micro-ROS precompiled library is compiled using `arm-none-eabi-gcc` 9.2.1, a compatible version is expected when building the micro-ROS project.
 You can specify a compiler path with the following command:
 
 ```bash
