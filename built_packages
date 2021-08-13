@@ -2,7 +2,7 @@
 https://github.com/ros-controls/control_msgs 11fdcdf76434d8ca9047787d17add4e18f56e9d6
 https://github.com/eProsima/Micro-CDR.git 21c99e0d8d140c50b45f13c8ed3716cb9fa0fb27
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 4ccec07f4089ec1ec49e72c4ed0484ae6515cd75
-https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git f646261d5b8f8f48fbe075e8ff4730bf27e1ce6b
+https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 2ad69f99a1646b9d824d346fddcd3f1d53c23896
 https://github.com/micro-ROS/rcutils 831aef91fe39c64b052af1139d6047814d5bd52b
 https://github.com/ros2/rclc eef4b5914a73cdf2e3547cbf201ebd67ad2d64e9
 https://github.com/micro-ROS/rosidl_typesupport.git fd4d39ad49c9c762612f40b72b6e6a91488b6e88
@@ -12,13 +12,13 @@ https://github.com/micro-ROS/micro_ros_utilities c829971bd33ac1f14a94aa722476110
 https://github.com/micro-ROS/micro_ros_msgs.git c8af6d4f246d1b324e6578ec967c8ddc1f4093d5
 https://gitlab.com/micro-ROS/ros_tracing/ros2_tracing.git/ 19e4a74f613886c88e3b9cf67bb20254afbc26d1
 https://github.com/ros2/example_interfaces.git ae3df08ac12cea293f53520c7c7dc67cb0cf5355
-https://github.com/ros2/rcpputils.git cd4ce08ca61a9b641c0a6d6e02a9302de804b0b0
+https://github.com/ros2/rcpputils.git bbac28f94d3b349cb28183b8a6bd9d205df89057
 https://github.com/ros2/test_interface_files.git ea4d4f33eca97f37b4294e6ab012fa0f216de609
 https://github.com/ros2/rcl_logging.git 77b5b2a6c948a6db1986501edc83f12ceadedba3
 https://github.com/ros2/rcl_interfaces.git 9a44202bbaf76e19fde21da0e90d8afbe89bd263
 https://github.com/ros2/rosidl.git 36ed120f43daeaab31fd9ba2bf8dfb58db05091d
 https://github.com/ros2/rosidl_defaults.git 6665e8848389f2c67d7c68ce7c53ca957ebcc97e
-https://github.com/ros2/rcl.git da4f1b92d2395e4f50c9c9c413da2f5c259dc162
+https://github.com/ros2/rcl.git 4296dd1e94c444e4fca8b76a638eba80de27614d
 https://github.com/ros2/rmw_implementation.git 0fcac11eef35dbfd393695c8550c7af9945ebd82
 https://github.com/ros2/rosidl_dds.git 664a9daadce12d02d35091d1bfde7acabe829354
 https://github.com/ros2/libyaml_vendor.git ce1ad8793760ae9585d19a1e484e7342acb95fa2
