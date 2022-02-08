@@ -49,6 +49,12 @@ cp -R firmware/build/include/* /project/libmicroros/include
 
 cp -R firmware/build/libmicroros.a /project/libmicroros/libmicroros.a
 
+######## Fix include paths  ########
+INCLUDE_ROS2_PACKAGES=( rmw rcl rcl_action rcl_lifecycle rcl_logging_interface )
+for var in "${INCLUDE_ROS2_PACKAGES[@]}"; do
+  mv /project/libmicroros/include/${var}/${var}/* /project/libmicroros/include/${var}
+done
+
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /project/available_ros2_types
 find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /project/available_ros2_types
