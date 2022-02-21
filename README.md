@@ -35,6 +35,7 @@ source ~/.bashrc
 Once the Pico SDK is ready compile the example:
 
 ```bash
+cd micro_ros_raspberrypi_pico_sdk
 mkdir build
 cd build
 cmake ..
