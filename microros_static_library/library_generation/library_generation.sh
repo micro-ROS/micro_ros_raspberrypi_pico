@@ -50,10 +50,14 @@ cp -R firmware/build/include/* /project/libmicroros/include
 cp -R firmware/build/libmicroros.a /project/libmicroros/libmicroros.a
 
 ######## Fix include paths  ########
-INCLUDE_ROS2_PACKAGES=( rmw rcl rcl_action rcl_lifecycle rcl_logging_interface rosidl_runtime_c rosidl_typesupport_interface)
-for var in "${INCLUDE_ROS2_PACKAGES[@]}"; do
-  mv /project/libmicroros/include/${var}/${var}/* /project/libmicroros/include/${var}
-  rm -rf /project/libmicroros/include/${var}/${var}
+pushd firmware/mcu_ws > /dev/null
+    INCLUDE_ROS2_PACKAGES=$(colcon list | awk '{print $1}' | awk -v d=" " '{s=(NR==1?s:s d)$0}END{print s}')
+popd > /dev/null
+
+apt -y install rsync
+for var in ${INCLUDE_ROS2_PACKAGES}; do
+    rsync -r /project/libmicroros/include/${var}/${var}/* /project/libmicroros/include/${var}
+    rm -rf /project/libmicroros/include/${var}/${var}
 done
 
 ######## Generate extra files ########
