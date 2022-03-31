@@ -1,3 +1,13 @@
+<br/>
+
+<a>
+   <p align="center">
+      <img width="40%" src=".images/pico_logo.png">
+      <img width="40%" src=".images/microros_logo.png">
+   </p>
+</a>
+<br/>
+
 # micro-ROS module for Raspberry Pi Pico SDK
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
