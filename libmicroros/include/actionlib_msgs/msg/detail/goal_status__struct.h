@@ -68,7 +68,7 @@ enum
 /// Constant 'REJECTED'.
 /**
   * The goal was rejected by the action server without being processed,
-  *    because the goal was unattainable or invalid (Terminal State).
+  * because the goal was unattainable or invalid (Terminal State).
  */
 enum
 {
@@ -98,7 +98,7 @@ enum
 /// Constant 'RECALLED'.
 /**
   * The goal received a cancel request before it started executing
-  * and was successfully cancelled (Terminal State).
+  *    and was successfully cancelled (Terminal State).
  */
 enum
 {

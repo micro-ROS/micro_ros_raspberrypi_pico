@@ -62,8 +62,8 @@ enum
   *
   * Example:
   * - id = 3
-  * parent_id = 0
-  *   title = "fun"
+  *   parent_id = 0
+  * title = "fun"
   * - id = 2
   * parent_id = 0
   *   title = "robot"
@@ -75,10 +75,10 @@ enum
   * title = "turtle"
   *
   * Gives a menu tree like this:
-  * - fun
+  *  - fun
   *  - robot
   *    - pr2
-  *    - turtle
+  * - turtle
  */
 typedef struct visualization_msgs__msg__MenuEntry
 {
