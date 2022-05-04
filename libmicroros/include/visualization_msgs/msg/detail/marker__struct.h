@@ -142,8 +142,8 @@ enum
 /// Struct defined in msg/Marker in the package visualization_msgs.
 /**
   * See:
-  *  - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
-  *  - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
+  * - http://www.ros.org/wiki/rviz/DisplayTypes/Marker
+  * - http://www.ros.org/wiki/rviz/Tutorials/Markers%3A%20Basic%20Shapes
   *
   * for more information on using this message with rviz.
  */
