@@ -48,7 +48,7 @@ enum
 /// Constant 'SUCCEEDED'.
 /**
   * The goal was achieved successfully by the action server
-  *   (Terminal State).
+  * (Terminal State).
  */
 enum
 {
