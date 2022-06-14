@@ -78,7 +78,7 @@ enum
 /// Constant 'PREEMPTING'.
 /**
   * The goal received a cancel request after it started executing
-  *    and has not yet completed execution.
+  * and has not yet completed execution.
  */
 enum
 {
