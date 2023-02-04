@@ -173,6 +173,7 @@ action_msgs/CancelGoal.srv
 action_msgs/GoalStatus.msg
 action_msgs/GoalStatusArray.msg
 action_msgs/GoalInfo.msg
+service_msgs/ServiceEventInfo.msg
 rcl_interfaces/SetParameters.srv
 rcl_interfaces/DescribeParameters.srv
 rcl_interfaces/GetParameterTypes.srv
