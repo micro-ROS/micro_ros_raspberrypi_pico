@@ -188,6 +188,10 @@ rcl_interfaces/SetParameters.srv
 rcl_interfaces/ListParameters.srv
 rcl_interfaces/GetParameters.srv
 rcl_interfaces/SetParametersAtomically.srv
+type_description_interfaces/IndividualTypeDescription.msg
+type_description_interfaces/TypeDescription.msg
+type_description_interfaces/Field.msg
+type_description_interfaces/FieldType.msg
 example_interfaces/Char.msg
 example_interfaces/Int64.msg
 example_interfaces/Float32.msg
