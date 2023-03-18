@@ -35,7 +35,7 @@ source ~/.bashrc
 
 ### 2. Compile Example
 
-Once the Pico SDK is ready compile the example:
+Once the Pico SDK is ready, compile the example:
 
 ```bash
 cd micro_ros_raspberrypi_pico_sdk
