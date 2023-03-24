@@ -59,9 +59,12 @@ lifecycle_msgs/TransitionDescription.msg
 lifecycle_msgs/Transition.msg
 lifecycle_msgs/TransitionEvent.msg
 lifecycle_msgs/State.msg
+type_description_interfaces/GetTypeDescription.srv
 type_description_interfaces/Field.msg
+type_description_interfaces/KeyValue.msg
 type_description_interfaces/TypeDescription.msg
 type_description_interfaces/FieldType.msg
+type_description_interfaces/TypeSource.msg
 type_description_interfaces/IndividualTypeDescription.msg
 action_msgs/CancelGoal.srv
 action_msgs/GoalStatusArray.msg
