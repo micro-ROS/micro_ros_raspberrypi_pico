@@ -27,7 +27,9 @@ lifecycle_msgs/State.msg
 lifecycle_msgs/TransitionDescription.msg
 builtin_interfaces/Duration.msg
 builtin_interfaces/Time.msg
+rcl_interfaces/GetLoggerLevels.srv
 rcl_interfaces/SetParametersAtomically.srv
+rcl_interfaces/SetLoggerLevels.srv
 rcl_interfaces/GetParameters.srv
 rcl_interfaces/ListParameters.srv
 rcl_interfaces/GetParameterTypes.srv
@@ -36,10 +38,12 @@ rcl_interfaces/SetParameters.srv
 rcl_interfaces/ParameterType.msg
 rcl_interfaces/Log.msg
 rcl_interfaces/ParameterEventDescriptors.msg
+rcl_interfaces/LoggerLevel.msg
 rcl_interfaces/ParameterDescriptor.msg
 rcl_interfaces/Parameter.msg
 rcl_interfaces/SetParametersResult.msg
 rcl_interfaces/IntegerRange.msg
+rcl_interfaces/SetLoggerLevelsResult.msg
 rcl_interfaces/ListParametersResult.msg
 rcl_interfaces/ParameterValue.msg
 rcl_interfaces/FloatingPointRange.msg
