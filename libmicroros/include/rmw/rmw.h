@@ -106,6 +106,7 @@ extern "C"
 #include "rmw/message_sequence.h"
 #include "rmw/publisher_options.h"
 #include "rmw/qos_profiles.h"
+#include "rmw/dynamic_message_type_support.h"
 #include "rmw/subscription_options.h"
 #include "rmw/types.h"
 #include "rmw/visibility_control.h"
@@ -427,7 +428,7 @@ rmw_destroy_publisher(rmw_node_t * node, rmw_publisher_t * publisher);
  * \return `RMW_RET_INCORRECT_RMW_IMPLEMENTATION` if `publisher` implementation identifier
  *   does not match this implementation, or
  * \return `RMW_RET_UNSUPPORTED` if the implementation does not support ROS message loaning, or
- * \return `RMW_RET_ERROR` if an unexpected error occured.
+ * \return `RMW_RET_ERROR` if an unexpected error occurred.
  */
 RMW_PUBLIC
 RMW_WARN_UNUSED
