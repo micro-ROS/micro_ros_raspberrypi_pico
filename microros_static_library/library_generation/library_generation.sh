@@ -52,6 +52,8 @@ cp -R firmware/build/libmicroros.a /project/libmicroros/libmicroros.a
 ######## Generate extra files ########
 find firmware/mcu_ws/ros2 \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' > /project/available_ros2_types
 find firmware/mcu_ws/extra_packages \( -name "*.srv" -o -name "*.msg" -o -name "*.action" \) | awk -F"/" '{print $(NF-2)"/"$NF}' >> /project/available_ros2_types
+# sort it so that the result order is reproducible
+sort -o /project/available_ros2_types /project/available_ros2_types
 
 cd firmware
 echo "" > /project/built_packages
