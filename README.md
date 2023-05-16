@@ -36,11 +36,7 @@ source ~/.bashrc
 
 ### 2. Compile Example
 
-<<<<<<< HEAD
-Once the Pico SDK is ready compile the example: 
-=======
 Once the Pico SDK is ready, compile the example:
->>>>>>> 1c9df8f (micro-commit of a comma as thanks for microROS (#834))
 
 ```bash
 cd micro_ros_raspberrypi_pico_sdk

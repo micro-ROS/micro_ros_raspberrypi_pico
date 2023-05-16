@@ -2,8 +2,4 @@ repositories:
   control_msgs:
     type: git
     url: https://github.com/ros-controls/control_msgs
-<<<<<<< HEAD
     version: foxy-devel
-=======
-    version: humble
->>>>>>> 257f14d (Deprecate galactic and Sort output of library_generation (#879))

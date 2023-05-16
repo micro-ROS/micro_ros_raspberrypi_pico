@@ -18,13 +18,8 @@ jobs:
             branch: foxy
           - distro: rolling
             branch: main
-<<<<<<< HEAD
-          - distro: galactic
-            branch: galactic
-=======
           - distro: humble
             branch: humble
->>>>>>> 257f14d (Deprecate galactic and Sort output of library_generation (#879))
     steps:
       - uses: actions/checkout@v2
         with:
