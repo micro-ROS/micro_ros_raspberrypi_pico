@@ -38,7 +38,7 @@ source ~/.bashrc
 Once the Pico SDK is ready, compile the example:
 
 ```bash
-cd micro_ros_raspberrypi_pico_sdk
+cd uros_pico_w
 mkdir build
 cd build
 cmake ..
@@ -54,13 +54,34 @@ cp pico_micro_ros_example.uf2 /media/$USER/RPI-RP2
 Micro-ROS follows the client-server architecture, so you need to start the Micro-ROS Agent.
 You can do so using the [micro-ros-agent Docker](https://hub.docker.com/r/microros/micro-ros-agent):
 ```bash
-docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:humble serial --dev /dev/ttyACM0 -b 115200
+docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:humble upd4 --port 4444
+```
+
+Or using the snap agent:
+```bash
+#Install
+sudo snap install micro-ros-agent
+#Run
+micro-ros-agent udp4 --port 4444 # add -v[1-6] to specify verbosity
+```
+
+Or directly in your ros ecosystem running the micro-ros-agent node [micro-ros-agent node](https://micro.ros.org/docs/tutorials/core/first_application_linux/):
+```bash
+# Download micro-ROS-Agent packages
+ros2 run micro_ros_setup create_agent_ws.sh
+
+# Build step
+ros2 run micro_ros_setup build_agent.sh
+. install/local_setup.bash
+
+# Run a micro-ROS agent
+ros2 run micro_ros_agent micro_ros_agent udp4 --port 4444
 ```
 
 ## What files are relevant?
-- `pico_uart_transport.c`: Contains the board specific implementation of the serial transport (no change needed).
+- `pico_wifi_transport.c`: Contains the board specific implementation of the wifi transport (no change needed).
 - `CMakeLists.txt`: CMake file.
-- `pico_micro_ros_example.c`: The actual ROS 2 publisher.
+- `pico_micro_ros_example.c`: The Picobot ROS 2 exemple.
 
 ## How to build the precompiled library
 
@@ -73,6 +94,7 @@ docker run -it --rm -v $(pwd):/project microros/micro_ros_static_library_builder
 ```
 
 Note that folders added to `microros_static_library/library_generation/extra_packages` and entries added to `microros_static_library/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.
+
 ## How to use Pico SDK?
 
 Here is a Raspberry Pi Pico C/C++ SDK documentation:

@@ -4,36 +4,76 @@
 #include <rcl/error_handling.h>
 #include <rclc/rclc.h>
 #include <rclc/executor.h>
-#include <std_msgs/msg/int32.h>
+
+#include <std_msgs/msg/int8.h>
+
 #include <rmw_microros/rmw_microros.h>
 
 #include "pico/stdlib.h"
-#include "pico_uart_transports.h"
+#include "pico_wifi_transport.h"
+#include "librobot/robot.h"
 
-const uint LED_PIN = 25;
+robot picobot;
+action current_state = STOP;
 
 rcl_publisher_t publisher;
-std_msgs__msg__Int32 msg;
+rcl_subscription_t subscriber;
+
+std_msgs__msg__Int8 msg_pub;
+std_msgs__msg__Int8 msg_sub;
 
 void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 {
-    rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
-    msg.data++;
+    msg_pub.data = read_sensors(&picobot.wall, &picobot.ground);
+    char buf[3];
+    sprintf(buf, "%d", msg_pub.data);
+    printf("%s ", buf);
+    rcl_ret_t ret = rcl_publish(&publisher, &msg_pub, NULL);
+
+    switch (current_state)
+    {
+    case STOP:
+        brake_robot(&picobot);
+        break;
+    case FORWARD:
+        forward_robot(&picobot, 50);
+        break;
+    case RIGHT:
+        right_robot(&picobot, 45);
+        break;
+    case BACKWARD:
+        backward_robot(&picobot, 50);
+        break;
+    case LEFT:
+        left_robot(&picobot, 45);
+        break;
+    case DUCK_LEFT:
+        duck_left_robot(&picobot, 50);
+        break;
+    case DUCK_RIGHT:
+        duck_right_robot(&picobot, 50);
+        break;
+    default:
+        break;
+    }
+}
+
+void subscription_callback(const void *msgin)
+{
+    const std_msgs__msg__Int8 *msg = (const std_msgs__msg__Int8 *)msgin;
+
+    current_state = msg->data;
 }
 
 int main()
 {
-    rmw_uros_set_custom_transport(
-		true,
-		NULL,
-		pico_serial_transport_open,
-		pico_serial_transport_close,
-		pico_serial_transport_write,
-		pico_serial_transport_read
-	);
+    set_microros_wifi_transports("SSID", "PASSWORD", "PC IP ADDRESS", 4444);
 
-    gpio_init(LED_PIN);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
+    picobot.state = STOP;
+    init_motor(&picobot.motor_left, 20, 19, 21);
+    init_motor(&picobot.motor_right, 17, 18, 16);
+    init_sensor(&picobot.wall, 26, 27, 28);
+    init_sensor(&picobot.ground, 13, 12, 11);
 
     rcl_timer_t timer;
     rcl_node_t node;
@@ -44,7 +84,7 @@ int main()
     allocator = rcl_get_default_allocator();
 
     // Wait for agent successful ping for 2 minutes.
-    const int timeout_ms = 1000; 
+    const int timeout_ms = 1000;
     const uint8_t attempts = 120;
 
     rcl_ret_t ret = rmw_uros_ping_agent(timeout_ms, attempts);
@@ -52,33 +92,39 @@ int main()
     if (ret != RCL_RET_OK)
     {
         // Unreachable agent, exiting program.
+        printf("Agent unreachable. Exiting...");
         return ret;
     }
 
     rclc_support_init(&support, 0, NULL, &allocator);
 
-    rclc_node_init_default(&node, "pico_node", "", &support);
-    rclc_publisher_init_default(
+    rclc_node_init_default(&node, "picobot_node", "", &support);
+
+    rclc_subscription_init_best_effort(
+        &subscriber,
+        &node,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int8),
+        "picobot/cmd_vel");
+
+    rclc_publisher_init_best_effort(
         &publisher,
         &node,
-        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
-        "pico_publisher");
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int8),
+        "picobot/sensors");
 
     rclc_timer_init_default(
         &timer,
         &support,
-        RCL_MS_TO_NS(1000),
+        RCL_MS_TO_NS(100),
         timer_callback);
 
-    rclc_executor_init(&executor, &support.context, 1, &allocator);
+    rclc_executor_init(&executor, &support.context, 2, &allocator);
     rclc_executor_add_timer(&executor, &timer);
+    rclc_executor_add_subscription(&executor, &subscriber, &msg_sub, &subscription_callback, ON_NEW_DATA);
 
-    gpio_put(LED_PIN, 1);
-
-    msg.data = 0;
     while (true)
     {
-        rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
+        rcl_ret_t ret = rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
     }
     return 0;
 }

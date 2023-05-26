@@ -6,20 +6,33 @@ project(pico_micro_ros_example C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
+set(PICO_BOARD pico_w CACHE STRING "Board type")
+
 pico_sdk_init()
 
 link_directories(libmicroros)
 add_executable(pico_micro_ros_example
     pico_micro_ros_example.c
-    pico_uart_transport.c
+    pico_wifi_transport.c
+    librobot/motor.c
+    librobot/robot.c
+    librobot/sensor.c
 )
 target_link_libraries(pico_micro_ros_example
     pico_stdlib
+    hardware_pwm
     microros
 )
 
 target_include_directories(pico_micro_ros_example PUBLIC
     libmicroros/include
+    librobot
+    ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}/..
+)
+
+target_link_libraries(pico_micro_ros_example
+    pico_cyw43_arch_lwip_threadsafe_background
 )
 
 SET(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -ffunction-sections -fdata-sections")
