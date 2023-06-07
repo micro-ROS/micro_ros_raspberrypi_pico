@@ -60,7 +60,7 @@ micro-ros-agent serial --dev /dev/ttyACM0 -b 115200
 
 or using the [micro-ros-agent Docker](https://hub.docker.com/r/microros/micro-ros-agent):
 ```bash
-docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:rolling serial --dev /dev/ttyACM0 -b 115200
+docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:iron serial --dev /dev/ttyACM0 -b 115200
 ```
 
 ## What files are relevant?
@@ -74,8 +74,8 @@ Micro-ROS is precompiled for Raspberry Pi Pico in [`libmicroros`](libmicroros).
 If you want to compile it by yourself:
 
 ```bash
-docker pull microros/micro_ros_static_library_builder:rolling
-docker run -it --rm -v $(pwd):/project microros/micro_ros_static_library_builder:rolling
+docker pull microros/micro_ros_static_library_builder:iron
+docker run -it --rm -v $(pwd):/project microros/micro_ros_static_library_builder:iron
 ```
 
 Note that folders added to `microros_static_library/library_generation/extra_packages` and entries added to `microros_static_library/library_generation/extra_packages/extra_packages.repos` will be taken into account by this build system.

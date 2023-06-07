@@ -8,17 +8,17 @@ on:
   schedule:
     - cron:  '0 4 * * *'
   pull_request:
-    branches: 
+    branches:
       - '**'
 
 jobs:
 
   micro_ros_raspberrypi_pico_sdk:
     runs-on: ubuntu-latest
-    container: ubuntu:20.04
+    container: ubuntu:jammy
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: micro_ros_raspberrypi_pico_sdk
 
@@ -35,10 +35,8 @@ jobs:
         run: |
           export PICO_SDK_PATH=$HOME/pico-sdk
           cd micro_ros_raspberrypi_pico_sdk
-          mkdir build 
+          mkdir build
           cd build
           cmake ..
           make
           (test -f pico_micro_ros_example.uf2) && true || false
-
-      
