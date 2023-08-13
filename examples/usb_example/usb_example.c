@@ -17,8 +17,8 @@ std_msgs__msg__Int32 msg;
 
 void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
 {
-    rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
     msg.data++;
+    rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
 }
 
 int main()

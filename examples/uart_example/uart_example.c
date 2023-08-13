@@ -76,6 +76,7 @@ int main()
     rclc_support_init(&support, 0, NULL, &allocator);
 
     rclc_node_init_default(&node, "pico_node", "", &support);
+
     rclc_publisher_init_default(
         &publisher,
         &node,
@@ -85,7 +86,7 @@ int main()
     rclc_timer_init_default(
         &timer,
         &support,
-        RCL_MS_TO_NS(1000),
+        RCL_MS_TO_NS(100),
         timer_callback);
 
     rclc_executor_init(&executor, &support.context, 1, &allocator);
@@ -96,6 +97,7 @@ int main()
     msg.data = 0;
     while (true)
     {
+        sleep_ms(500);
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
     }
     return 0;

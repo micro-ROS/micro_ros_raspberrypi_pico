@@ -1,0 +1,2 @@
+add_subdirectory(uart_example)
+add_subdirectory(usb_example)
