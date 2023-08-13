@@ -97,7 +97,7 @@ int main()
     msg.data = 0;
     while (true)
     {
-        sleep_ms(500);
+        sleep_ms(600);
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));
     }
     return 0;
