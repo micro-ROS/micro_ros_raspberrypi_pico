@@ -62,7 +62,7 @@ control_msgs__msg__MecanumDriveControllerState__fini(control_msgs__msg__MecanumD
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__MecanumDriveControllerState *
-control_msgs__msg__MecanumDriveControllerState__create();
+control_msgs__msg__MecanumDriveControllerState__create(void);
 
 /// Destroy msg/MecanumDriveControllerState message.
 /**

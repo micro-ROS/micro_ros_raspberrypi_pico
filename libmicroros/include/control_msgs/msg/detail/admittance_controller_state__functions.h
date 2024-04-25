@@ -62,7 +62,7 @@ control_msgs__msg__AdmittanceControllerState__fini(control_msgs__msg__Admittance
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__AdmittanceControllerState *
-control_msgs__msg__AdmittanceControllerState__create();
+control_msgs__msg__AdmittanceControllerState__create(void);
 
 /// Destroy msg/AdmittanceControllerState message.
 /**

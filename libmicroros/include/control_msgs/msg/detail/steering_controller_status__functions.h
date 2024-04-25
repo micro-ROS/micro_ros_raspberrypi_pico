@@ -62,7 +62,7 @@ control_msgs__msg__SteeringControllerStatus__fini(control_msgs__msg__SteeringCon
  */
 ROSIDL_GENERATOR_C_PUBLIC_control_msgs
 control_msgs__msg__SteeringControllerStatus *
-control_msgs__msg__SteeringControllerStatus__create();
+control_msgs__msg__SteeringControllerStatus__create(void);
 
 /// Destroy msg/SteeringControllerStatus message.
 /**
