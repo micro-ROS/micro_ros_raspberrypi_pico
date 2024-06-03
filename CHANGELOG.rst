@@ -2,6 +2,137 @@
 Changelog for package micro_ros_raspberrypicosdk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* micro-ROS iron Library auto-update 02-06-2024 06:10 (`#1190 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1190>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 27-05-2024 06:11 (`#1185 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1185>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 21-05-2024 06:10 (`#1181 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1181>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 18-05-2024 06:08 (`#1179 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1179>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-05-2024 06:09 (`#1176 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1176>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 11-05-2024 06:08 (`#1172 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1172>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 09-05-2024 06:09 (`#1167 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1167>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 06-05-2024 06:10 (`#1165 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1165>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 04-05-2024 06:08 (`#1163 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1163>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 02-05-2024 06:09 (`#1161 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1161>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 30-04-2024 06:09 (`#1157 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1157>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 24-04-2024 06:10 (`#1152 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1152>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 22-04-2024 06:09 (`#1148 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1148>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 19-04-2024 06:09 (`#1147 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1147>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 16-04-2024 06:08 (`#1144 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1144>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 08-04-2024 06:09 (`#1135 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1135>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 03-04-2024 06:08 (`#1129 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1129>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 25-03-2024 06:09 (`#1124 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1124>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 22-03-2024 06:08 (`#1121 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1121>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 18-03-2024 06:09 (`#1114 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1114>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-03-2024 06:08 (`#1110 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1110>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 12-03-2024 06:08 (`#1107 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1107>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 06-03-2024 06:09 (`#1101 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1101>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 04-03-2024 06:54 (`#1099 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1099>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 17-02-2024 06:07 (`#1085 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1085>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 14-02-2024 06:09 (`#1082 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1082>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 09-02-2024 06:08 (`#1079 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1079>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 08-02-2024 06:09 (`#1077 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1077>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 02-02-2024 06:08 (`#1071 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1071>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 20-01-2024 06:07 (`#1059 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1059>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 06-01-2024 06:07 (`#1050 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1050>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* Fix stdio init (`#1048 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1048>`_)
+* micro-ROS iron Library auto-update 05-01-2024 06:08 (`#1047 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1047>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 22-12-2023 06:08 (`#1043 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1043>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-12-2023 06:09 (`#1038 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1038>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 06-12-2023 06:09 (`#1036 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1036>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 30-11-2023 06:09 (`#1028 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1028>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 22-11-2023 06:09 (`#1022 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1022>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 18-11-2023 06:07 (`#1018 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1018>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 17-11-2023 06:08 (`#1016 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1016>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 11-11-2023 06:12 (`#1011 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1011>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 10-11-2023 06:08 (`#1008 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1008>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 10-10-2023 06:08 (`#993 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/993>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 02-10-2023 06:08 (`#989 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/989>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-09-2023 06:08 (`#977 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/977>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 09-09-2023 06:06 (`#972 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/972>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 08-09-2023 06:07 (`#970 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/970>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 06-09-2023 06:08 (`#966 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/966>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 05-09-2023 06:07 (`#963 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/963>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 02-09-2023 06:06 (`#960 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/960>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 26-07-2023 06:08 (`#938 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/938>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 19-07-2023 06:08 (`#934 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/934>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 18-07-2023 06:08 (`#932 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/932>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-07-2023 06:08 (`#929 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/929>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 14-07-2023 06:09 (`#927 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/927>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 28-06-2023 06:09 (`#923 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/923>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 26-06-2023 06:10 (`#921 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/921>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 23-06-2023 06:09 (`#919 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/919>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 22-06-2023 06:08 (`#917 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/917>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 21-06-2023 06:08 (`#914 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/914>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 20-06-2023 06:08 (`#913 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/913>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 16-06-2023 06:08 (`#910 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/910>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 15-06-2023 06:08 (`#909 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/909>`_)
+  Co-authored-by: pablogs9 <pablogs9@users.noreply.github.com>
+* micro-ROS iron Library auto-update 14-06-2023 10:12 (`#906 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/906>`_)
+  Co-authored-by: Acuadros95 <Acuadros95@users.noreply.github.com>
+* Contributors: Pablo Garrido, github-actions[bot]
+
 4.1.0 (2023-06-12)
 ------------------
 * micro-ROS iron Library auto-update 09-06-2023 12:57 (`#903 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/903>`_)
