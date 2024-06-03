@@ -2,8 +2,8 @@
 Changelog for package micro_ros_raspberrypicosdk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+6.0.0 (2024-06-03)
+------------------
 * CI typo
 * micro-ROS rolling Library auto-update 03-06-2024 09:25 (`#1192 <https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/issues/1192>`_)
   Co-authored-by: pablogs9 <7647884+pablogs9@users.noreply.github.com>
