@@ -23,11 +23,15 @@ control_msgs/JointTolerance.msg
 control_msgs/JointTrajectory.action
 control_msgs/JointTrajectoryControllerState.msg
 control_msgs/MecanumDriveControllerState.msg
+control_msgs/MultiDOFCommand.msg
+control_msgs/MultiDOFStateStamped.msg
 control_msgs/ParallelGripperCommand.action
 control_msgs/PidState.msg
 control_msgs/PointHead.action
 control_msgs/QueryCalibrationState.srv
 control_msgs/QueryTrajectoryState.srv
+control_msgs/SingleDOFState.msg
+control_msgs/SingleDOFStateStamped.msg
 control_msgs/SingleJointPosition.action
 control_msgs/SteeringControllerStatus.msg
 data/Test.action
