@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git dfd51d45836105906fad1a44c2afd6cd41b1e4a1
+https://github.com/ament/ament_cmake.git 446e3ede3ec268bcc9f76be27b4a2a24ba6a96bb
 https://github.com/ament/ament_index.git 186831ac95e05632936b1399f8eda34d9f2199f4
 https://github.com/ament/ament_lint.git 2e54ed347731357c510273b3d4328eaabe6825d6
 https://github.com/ament/ament_package.git 2695c27e809ad431eebec608ea4ebf74d7f015c7
@@ -20,17 +20,17 @@ https://github.com/ros2/common_interfaces.git 0163014f208bbe840a5c2d23d98dc27fc0
 https://github.com/ros2/example_interfaces.git dec9e55175f95f0feecc46213df3a26c8543313f
 https://github.com/ros2/libyaml_vendor.git f4ccfc67e7ba2ec4e77170d105c1da0133fa3971
 https://github.com/ros2/rcl.git 2b159af6dcecd0c9d17f59774e7e1b82cc7ef076
-https://github.com/ros2/rcl_interfaces.git 4959b5d670af83fd4389693c1e532c1d9ae3db24
+https://github.com/ros2/rcl_interfaces.git f6b3741d921ef5414125091b2ccc74b863be3c24
 https://github.com/ros2/rcl_logging.git ecb3ab62168e873ef78201c8fda65b622b9f2707
 https://github.com/ros2/rclc 169b246f738a1b5604423f6187d27dc770781871
 https://github.com/ros2/rcpputils.git 162d345c2856b4644a31fbbaacfee9f3f5684f98
 https://github.com/ros2/rmw.git cf6b0ddba46b182b39852cf9679ef4c0350cb6a1
 https://github.com/ros2/rmw_implementation.git 28e53ebd9663f49fd98abd386d85ff883afbe7a9
 https://github.com/ros2/ros2_tracing.git 63f060e353f0504f11da0009403211d93957aa1c
-https://github.com/ros2/rosidl.git 86fa39823b6ec7d2e24940647c214a4082beab79
+https://github.com/ros2/rosidl.git 481c9437ab3dbf92807f8b2fb0b0bad5ba22d4bf
 https://github.com/ros2/rosidl_core.git 0ac65c0bfe629340d8d3569e0be1dce0e732a345
 https://github.com/ros2/rosidl_dds.git 395a946f1cde1999ddb78cb31717d0991421a317
 https://github.com/ros2/rosidl_defaults.git 0f2defcb7022132a11d96532d123c1eafc905182
 https://github.com/ros2/rosidl_dynamic_typesupport.git 96d1cb662b1b69409d80383ed20a41cc92267aa1
 https://github.com/ros2/test_interface_files.git 295542e2b2106d8e1274adb5b0c9f9e7d1571be6
-https://github.com/ros2/unique_identifier_msgs.git 6eb6eb3956e204a76963b036e8478bf91f56ad54
+https://github.com/ros2/unique_identifier_msgs.git 0d6c41ef5fc060f8dac7aae5dbad93692826b9e6
