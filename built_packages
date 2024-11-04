@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git d87f6f04af0ac2b4234512e032672afc201194ec
+https://github.com/ament/ament_cmake.git 24a853c13f4bdfaae038f518ea667bd0f1dfffd5
 https://github.com/ament/ament_index.git ba818db036e82d5f752d17e3e6fe6e3efd583bfb
 https://github.com/ament/ament_lint.git 9a4c6c8563df572a3e1610d0924c8a6700672ddb
 https://github.com/ament/ament_package.git cf415e74bb8faff896bb6915ee3d120cc7b60fc3
@@ -14,7 +14,7 @@ https://github.com/micro-ROS/rcutils d3f08898b9092b07102257a804ae0e6a9606eb11
 https://github.com/micro-ROS/rmw-microxrcedds.git 1b0527eddb98e4ca68761129987cbde89a769bbf
 https://github.com/micro-ROS/rosidl_typesupport.git 82bfacb38aae26cda159592aca5c43e4f4c291ea
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git c2776855f591388cf8900e3b8df15f9dfd95305b
-https://github.com/ros-controls/control_msgs f839564fbe971f454bf8ccd6195771704c7179da
+https://github.com/ros-controls/control_msgs e35dc75cd6d75d1b2f9bac7edc54049ef72cb59b
 https://github.com/ros2/ament_cmake_ros.git ede6248e1f36aaef85eb4eac23c782a134ef2bff
 https://github.com/ros2/common_interfaces.git dc6a22f88519982ead887de0f711aeae37456f78
 https://github.com/ros2/example_interfaces.git 58899de0f85388be333e32bcb78c551a6877db4d
