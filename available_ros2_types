@@ -11,6 +11,7 @@ composition_interfaces/ListNodes.srv
 composition_interfaces/LoadNode.srv
 composition_interfaces/UnloadNode.srv
 control_msgs/AdmittanceControllerState.msg
+control_msgs/DynamicInterfaceGroupValues.msg
 control_msgs/DynamicJointState.msg
 control_msgs/FollowJointTrajectory.action
 control_msgs/GripperCommand.action
