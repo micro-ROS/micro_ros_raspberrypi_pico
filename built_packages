@@ -1,5 +1,5 @@
 
-https://github.com/ament/ament_cmake.git fb1eda91c16a9423a8a96541e878358289e1b2b2
+https://github.com/ament/ament_cmake.git 2366f15479e37d552d4e225f09ccef1c6ccc8c4e
 https://github.com/ament/ament_index.git 5f9d3f4ae7772d3a007e099c527198f529084288
 https://github.com/ament/ament_lint.git f701809d982b837a76a5e8823994e6893ae0d5fe
 https://github.com/ament/ament_package.git 2695c27e809ad431eebec608ea4ebf74d7f015c7
@@ -14,7 +14,7 @@ https://github.com/micro-ROS/rcutils 2586c0cc466b40d21453de06ba80295babe5d03d
 https://github.com/micro-ROS/rmw-microxrcedds.git d4d26af5d4ffa9f5a0874fb147444383987abca8
 https://github.com/micro-ROS/rosidl_typesupport.git 16487c1ab537b5fdb34b936f2569fcf10b5aff54
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git cbd7719e07d5ca94077784accf95eac9ad535b56
-https://github.com/ros-controls/control_msgs 29df622c1a46592ee25f3eee2a4d03f7f91b1ad6
+https://github.com/ros-controls/control_msgs 946509a7cab4a6fb483910d71a11e06085e27e14
 https://github.com/ros2/ament_cmake_ros.git 7253d758b2779f556282f689772c4055eaf94019
 https://github.com/ros2/common_interfaces.git 473511f5807610bb8ed7744dfd2986dba4601fa6
 https://github.com/ros2/example_interfaces.git dec9e55175f95f0feecc46213df3a26c8543313f
@@ -31,6 +31,6 @@ https://github.com/ros2/rosidl.git b6a890cc15b97cab4769d40a183cd157db00b66b
 https://github.com/ros2/rosidl_core.git 0ac65c0bfe629340d8d3569e0be1dce0e732a345
 https://github.com/ros2/rosidl_dds.git 395a946f1cde1999ddb78cb31717d0991421a317
 https://github.com/ros2/rosidl_defaults.git 0f2defcb7022132a11d96532d123c1eafc905182
-https://github.com/ros2/rosidl_dynamic_typesupport.git 96d1cb662b1b69409d80383ed20a41cc92267aa1
-https://github.com/ros2/test_interface_files.git 295542e2b2106d8e1274adb5b0c9f9e7d1571be6
+https://github.com/ros2/rosidl_dynamic_typesupport.git d971a885732336114640b594aca0614cdf776079
+https://github.com/ros2/test_interface_files.git ea666209436700aa3879d413107b2c64cf5a09eb
 https://github.com/ros2/unique_identifier_msgs.git 0d6c41ef5fc060f8dac7aae5dbad93692826b9e6
