@@ -4,7 +4,7 @@ https://github.com/ament/ament_index.git 0a35ca69b3f3514242282e00ac9170e98c078fc
 https://github.com/ament/ament_lint.git 6237cc3cf1ae69161d5e4edd2fbf2b0f01f521b9
 https://github.com/ament/ament_package.git 2bebea676d180ef96785195da9daf88f3ca675f7
 https://github.com/ament/googletest.git 449327bfc17e58db5ce53955b8e250427909a1c8
-https://github.com/ament/uncrustify_vendor.git 84edaca76d32c3ed20ce7097ed91784029530306
+https://github.com/ament/uncrustify_vendor.git 670c64065d0a0d8407cbfa10124c542a9fde75c1
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
 https://github.com/eProsima/Micro-XRCE-DDS-Client.git 83f129a80770a09aac9e823896ecbf6a0eddf0fc
 https://github.com/micro-ROS/micro_ros_msgs.git 4594d9db17db735b1e655141fb4afb4cdcfc5789
@@ -28,7 +28,7 @@ https://github.com/ros2/rmw.git c9dd78a8f2895610fb3fb93809290b3806148b1a
 https://github.com/ros2/rmw_implementation.git aea33b836c27df6fbcc102ae0781f3109c45215e
 https://github.com/ros2/ros2_tracing.git 73a7e6dbc1ee98f0facebd1599ed8485fce71511
 https://github.com/ros2/rosidl.git 5d916790bbe2f502361b35737f74eda80233019b
-https://github.com/ros2/rosidl_core.git 84fa73d3974fe31fbe397e41e4449a31c2fb6ce4
+https://github.com/ros2/rosidl_core.git 230ca742577ec4927d76ea8627e30c798175da2a
 https://github.com/ros2/rosidl_dds.git 8d6fdb365792c81861cf1d49da2d265e91dca86d
 https://github.com/ros2/rosidl_defaults.git 95834cca83ee0d3d783bb68e4932cffd6673274c
 https://github.com/ros2/rosidl_dynamic_typesupport.git cb8c54d12c678daa70410bb0626ed8626f561e45
