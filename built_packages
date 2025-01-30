@@ -2,7 +2,7 @@
 https://github.com/ament/ament_cmake.git 4d0f3df6284175ae24972c26634a88d4b3a4d404
 https://github.com/ament/ament_index.git 0a35ca69b3f3514242282e00ac9170e98c078fcd
 https://github.com/ament/ament_lint.git 6237cc3cf1ae69161d5e4edd2fbf2b0f01f521b9
-https://github.com/ament/ament_package.git 2bebea676d180ef96785195da9daf88f3ca675f7
+https://github.com/ament/ament_package.git 446c1c5e8902270707a171f20170a435b43ae55c
 https://github.com/ament/googletest.git 449327bfc17e58db5ce53955b8e250427909a1c8
 https://github.com/ament/uncrustify_vendor.git 670c64065d0a0d8407cbfa10124c542a9fde75c1
 https://github.com/eProsima/Micro-CDR.git ed4fd513a24a53b93d548d342cb7aa0a18716f04
@@ -14,7 +14,7 @@ https://github.com/micro-ROS/rcutils c1b30530a228c4fcf6a6da78c0cbfd8f08fd3363
 https://github.com/micro-ROS/rmw-microxrcedds.git 554445fe739e4c5bcb27753ffbe21e03bb2c3c1f
 https://github.com/micro-ROS/rosidl_typesupport.git 7505a5f4ec8794ec1bb716bb54e0db89398dcd93
 https://github.com/micro-ROS/rosidl_typesupport_microxrcedds.git 6243b9f89e40ba4742c757951d7195f3d7745819
-https://github.com/ros-controls/control_msgs e787119747d7a2271e93b25133e93b392fc389af
+https://github.com/ros-controls/control_msgs d7ab8bf729cc203ba632d4b44eafd77bcbb5ecc9
 https://github.com/ros2/ament_cmake_ros.git 4656ed1c514fa12503a0c01d33fd13d406a5fb74
 https://github.com/ros2/common_interfaces.git 5283bd97b33584eb2246fc6134b2e948027e1c3c
 https://github.com/ros2/example_interfaces.git 3fac5497d76b1425cfbd556d3010f33d905d5f73
