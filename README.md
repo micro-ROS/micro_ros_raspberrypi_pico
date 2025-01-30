@@ -57,6 +57,17 @@ You can do so using the [micro-ros-agent Docker](https://hub.docker.com/r/micror
 docker run -it --rm -v /dev:/dev --privileged --net=host microros/micro-ros-agent:humble serial --dev /dev/ttyACM0 -b 115200
 ```
 
+### Using UART serial communication
+If you for example use a Raspberry Pi Debug Probe, and need to use the UART serial protocol instead of USB, make this change in `CMakeLists.txt`
+
+https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk/blob/b2f27345a35976e4e2e068022560ed1661faf732/CMakeLists.txt#L29
+
+```
+# Configure Pico
+pico_enable_stdio_usb(diff_drive 0)
+pico_enable_stdio_uart(diff_drive 1)
+```
+
 ## What files are relevant?
 - `pico_uart_transport.c`: Contains the board specific implementation of the serial transport (no change needed).
 - `CMakeLists.txt`: CMake file.
